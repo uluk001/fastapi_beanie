@@ -1,6 +1,7 @@
 from datetime import datetime
 from pydantic import BaseModel
 from typing import Optional
+from beanie import PydanticObjectId
 
 
 class ProductReviewBase(BaseModel):
@@ -16,3 +17,11 @@ class ProductReviewCreate(ProductReviewBase):
 
 class ProductReviewUpdate(ProductReviewBase):
     pass
+
+
+class ProductReviewRead(ProductReviewBase):
+    id: PydanticObjectId
+    date: datetime
+
+    class Config:
+        orm_mode = True

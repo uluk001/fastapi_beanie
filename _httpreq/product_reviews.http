@@ -1,0 +1,13 @@
+### Get all product reviews ###
+GET http://127.0.0.1:8000/product_review/
+
+### Create a product review ###
+POST http://127.0.0.1:8000/product_review/
+Content-Type: application/json
+
+{
+  "name": "Donald Trump",
+  "product": "Cadillac Escalade",
+  "rating": 4.9,
+  "review": "I love this car!"
+}
