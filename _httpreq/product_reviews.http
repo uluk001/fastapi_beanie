@@ -1,5 +1,7 @@
+@id=65abb213699e303e6223f54b
 ### Get all product reviews ###
 GET http://127.0.0.1:8000/product_review/
+
 
 ### Create a product review ###
 POST http://127.0.0.1:8000/product_review/
@@ -11,3 +13,23 @@ Content-Type: application/json
   "rating": 4.9,
   "review": "I love this car!"
 }
+
+
+### Get a product review ###
+GET http://127.0.0.1:8000/product_review/{{id}}/
+
+
+### Update a product review ###
+PUT http://127.0.0.1:8000/product_review/{{id}}/
+Content-Type: application/json
+
+{
+  "name": "Ronald Reagan",
+  "product": "Rolls Royce",
+  "rating": 3.2,
+  "review": "Not bad!"
+}
+
+
+### Delete a product review ###
+DELETE http://127.0.0.1:8000/product_review/{{id}}/
